@@ -9,8 +9,8 @@ build_script:
   # dotnet info
   - ps: dotnet --info
   # Run dotnet new 
-  - ps: dotnet restore src/RocketNET.sln
-  - ps: dotnet build src/RocketNET.sln
+  - ps: dotnet restore ./src/RocketNET.sln
+  - ps: dotnet build ./src/RocketNET.sln
 
 # send notifications
 
