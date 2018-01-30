@@ -1,0 +1,18 @@
+image: Visual Studio 2017
+
+# version of net core
+environment:
+    matrix:
+        - CLI_VERSION: 2.0.0
+
+build_script:
+  # dotnet info
+  - ps: dotnet --info
+  # Run dotnet new 
+  - ps: dotnet restore ./RocketNET.sln
+  - ps: dotnet build ./RocketNET.sln
+
+# send notifications
+
+test: off 
+version: 0.0.1.{build}
