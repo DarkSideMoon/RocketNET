@@ -1,0 +1,15 @@
+language: csharp
+dist: trusty
+mono: none
+env:  
+  - CLI_VERSION=latest
+os:  
+  - linux
+  - osx  
+
+before_script:
+- dotnet restore
+
+script:
+- dotnet build
+- dotnet test rocketnet\src\RocketNET\RocketNET.Test\RocketNET.Test.csproj
