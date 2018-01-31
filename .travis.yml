@@ -1,15 +1,12 @@
 language: csharp
 dist: trusty
 sudo: required
+solution: ./src/RocketNET/RocketNET.sln
 mono: none
-env:  
-  - CLI_VERSION=latest
-os:  
-  - linux
-  - osx  
+dotnet: 2.0.0
 
 before_script:
-- dotnet restore
+- dotnet restore ./src/RocketNET/RocketNET.sln
 
 script:
 - dotnet build
