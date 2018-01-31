@@ -24,7 +24,7 @@ test_script:
 notifications:
 - provider: Slack
   auth_token:
-    secure: xoxp-307205161936-308711500918-308919877815-66d379a9db08bb6c36fac511243a3208
+    secure: +KQvo96GGGHSrr0pp9VZGJ7TnF0d0YL66VPzv2wvPmWCUXQjaMx1TM30oLdyez2+ekGAZp1njkE26e7PrHWKwL8O1KbZMlmf/3OWCVdR1g8=
   channel: build_info
   on_build_success: true
   on_build_failure: true
@@ -36,4 +36,4 @@ after_test:
   - ps: |
       $env:PATH = 'C:\msys64\usr\bin;' + $env:PATH
       Invoke-WebRequest -Uri 'https://codecov.io/bash' -OutFile codecov.sh
-      bash codecov.sh -f "coverage.xml" -t 8c7fa0a0-b62e-4fda-8426-a1d22e6df390
+      bash codecov.sh -f "rocketnet_coverage.xml" -t 8c7fa0a0-b62e-4fda-8426-a1d22e6df390
