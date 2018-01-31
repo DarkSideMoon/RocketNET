@@ -16,9 +16,8 @@ build_script:
   - ps: dotnet restore ./src/RocketNET/RocketNET.sln
   - ps: dotnet build ./src/RocketNET/RocketNET.sln
 
-after_test:
-  - ps: .\build.ps1
-  - OpenCover.Console.exe -register:administrator -target:"C:/Program Files/dotnet/dotnet.exe" -targetargs:"test --logger:trx;LogFileName=results.trx /p:DebugType=full C:\projects\rocketnet\src\RocketNET\RocketNET.Core.Test\RocketNET.Core.Test.csproj" -filter:"+[*]* -[*]*" -output:".\rocketnet_coverage.xml"
+test_script:
+  - ps: OpenCover.Console.exe -register:administrator -target:"C:/Program Files/dotnet/dotnet.exe" -targetargs:"test --logger:trx;LogFileName=results.trx /p:DebugType=full C:\projects\rocketnet\src\RocketNET\RocketNET.Core.Test\RocketNET.Core.Test.csproj" -filter:"+[*]* -[*]*" -output:".\rocketnet_coverage.xml"
   - codecov -f .\coverage.xml -t 8c7fa0a0-b62e-4fda-8426-a1d22e6df390
 
 version: 0.0.1.{build}
