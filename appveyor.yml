@@ -2,7 +2,6 @@ image: Visual Studio 2017
 
 before_build:
   - choco install opencover.portable
- # - choco install codecov
 
 # version of net core
 environment:
@@ -18,17 +17,6 @@ build_script:
 
 test_script:
   - ps: OpenCover.Console.exe -register:administrator -target:"C:/Program Files/dotnet/dotnet.exe" -targetargs:"test --logger:trx;LogFileName=results.trx /p:DebugType=full C:\projects\rocketnet\src\RocketNET\RocketNET.Core.Test\RocketNET.Core.Test.csproj" -filter:"+[*]* -[*]*" -output:".\rocketnet_coverage.xml"
-  #- codecov -f .\coverage.xml -t 8c7fa0a0-b62e-4fda-8426-a1d22e6df390
-
-# send notifications
-notifications:
-- provider: Slack
-  auth_token:
-    secure: +KQvo96GGGHSrr0pp9VZGJ7TnF0d0YL66VPzv2wvPmWCUXQjaMx1TM30oLdyez2+ekGAZp1njkE26e7PrHWKwL8O1KbZMlmf/3OWCVdR1g8=
-  channel: build_info
-  on_build_success: true
-  on_build_failure: true
-  on_build_status_changed: false
 
 version: 0.0.1.{build}
 
