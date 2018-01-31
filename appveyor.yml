@@ -14,5 +14,13 @@ build_script:
 
 # send notifications
 
-test: off 
+test_script:
+ - ps: .\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:administrator -target:"%xunit20%\xunit.console.x86.exe" -targetargs:"C:\projects\savenature\TestLibrary\bin\Debug\TestLibrary.dll -noshadow" -output:"coverage.xml" -filter:"+[*]* -[*]*"
+
+after_test:
+  - ps: |
+      $env:PATH = 'C:\msys64\usr\bin;' + $env:PATH
+      Invoke-WebRequest -Uri 'https://codecov.io/bash' -OutFile codecov.sh
+      bash codecov.sh -f "coverage.xml" -t 8c7fa0a0-b62e-4fda-8426-a1d22e6df390
+
 version: 0.0.1.{build}
