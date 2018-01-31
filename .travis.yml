@@ -6,8 +6,11 @@ mono: none
 dotnet: 2.0.0
 
 install:
-  - nuget restore ./src/RocketNET/RocketNET.sln
+  - dotnet restore ./src/RocketNET/RocketNET.sln
 
 script:
 - dotnet build
 - dotnet test rocketnet\src\RocketNET\RocketNET.Test\RocketNET.Test.csproj
+
+notifications:
+    slack: rocketnet-developers:XGpKxx62XVCx2PZQilIGFX4x
