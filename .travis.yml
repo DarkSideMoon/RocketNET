@@ -5,8 +5,8 @@ solution: ./src/RocketNET/RocketNET.sln
 mono: none
 dotnet: 2.0.0
 
-before_script:
-- dotnet restore ./src/RocketNET/RocketNET.sln
+install:
+  - nuget restore ./src/RocketNET/RocketNET.sln
 
 script:
 - dotnet build
