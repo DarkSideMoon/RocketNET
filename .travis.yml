@@ -9,8 +9,8 @@ install:
   - dotnet restore ./src/RocketNET/RocketNET.sln
 
 script:
-- dotnet build
-- dotnet test rocketnet\src\RocketNET\RocketNET.Test\RocketNET.Test.csproj
+- dotnet build ./src/RocketNET/RocketNET.sln
+- dotnet test ./src/RocketNET/RocketNET.Test/RocketNET.Test.csproj
 
 notifications:
     slack: rocketnet-developers:XGpKxx62XVCx2PZQilIGFX4x
