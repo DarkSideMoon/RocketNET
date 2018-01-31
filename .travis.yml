@@ -1,5 +1,6 @@
 language: csharp
 dist: trusty
+sudo: required
 mono: none
 env:  
   - CLI_VERSION=latest
