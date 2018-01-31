@@ -2,7 +2,7 @@ image: Visual Studio 2017
 
 before_build:
   - choco install opencover.portable
-  - choco install codecov
+ # - choco install codecov
 
 # version of net core
 environment:
@@ -18,15 +18,22 @@ build_script:
 
 test_script:
   - ps: OpenCover.Console.exe -register:administrator -target:"C:/Program Files/dotnet/dotnet.exe" -targetargs:"test --logger:trx;LogFileName=results.trx /p:DebugType=full C:\projects\rocketnet\src\RocketNET\RocketNET.Core.Test\RocketNET.Core.Test.csproj" -filter:"+[*]* -[*]*" -output:".\rocketnet_coverage.xml"
-  - codecov -f .\coverage.xml -t 8c7fa0a0-b62e-4fda-8426-a1d22e6df390
+  #- codecov -f .\coverage.xml -t 8c7fa0a0-b62e-4fda-8426-a1d22e6df390
+
+# send notifications
+notifications:
+- provider: Slack
+  auth_token:
+    secure: xoxp-307205161936-308711500918-308919877815-66d379a9db08bb6c36fac511243a3208
+  channel: build_info
+  on_build_success: true
+  on_build_failure: true
+  on_build_status_changed: false
 
 version: 0.0.1.{build}
 
-#test_script:
-# - ps: .\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:administrator -target:"%xunit20%\xunit.console.x86.exe" -targetargs:"C:\projects\rocketnet\TestLibrary\bin\Debug\TestLibrary.dll -noshadow" -output:"coverage.xml" -filter:"+[*]* -[*]*"
- 
-#after_test:
-#  - ps: |
-#      $env:PATH = 'C:\msys64\usr\bin;' + $env:PATH
-#      Invoke-WebRequest -Uri 'https://codecov.io/bash' -OutFile codecov.sh
-#      bash codecov.sh -f "coverage.xml" -t 8c7fa0a0-b62e-4fda-8426-a1d22e6df390
+after_test:
+  - ps: |
+      $env:PATH = 'C:\msys64\usr\bin;' + $env:PATH
+      Invoke-WebRequest -Uri 'https://codecov.io/bash' -OutFile codecov.sh
+      bash codecov.sh -f "coverage.xml" -t 8c7fa0a0-b62e-4fda-8426-a1d22e6df390
