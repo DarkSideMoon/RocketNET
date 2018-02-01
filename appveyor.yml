@@ -2,7 +2,7 @@ image: Visual Studio 2017
 
 before_build:
   - choco install opencover.portable
-  - choco install coveralls.io --source https://dotnet.myget.org/F/dotnet-core/api/v2
+  #- choco install coveralls.io --source https://dotnet.myget.org/F/dotnet-core/api/v2
 
 # version of net core
 environment:
@@ -20,7 +20,9 @@ build_script:
 
 test_script:
   - ps: OpenCover.Console.exe -register:administrator -target:"C:/Program Files/dotnet/dotnet.exe" -targetargs:"test --logger:trx;LogFileName=results.trx /p:DebugType=full C:\projects\rocketnet\src\RocketNET\RocketNET.Test\RocketNET.Test.csproj" -filter:"+[*]* -[*]*" -output:".\rocketnet_coverage.xml"
-  - ps: coveralls.net.exe --opencover coverage.xml -r 3d+rDxyuGPl4H9R/S/3OBlLWyH8NAncJfr8QfWfMV1XtTT8icBNIalrYietsIlIR
+  
+  # TODO: not work. need to fix
+  #- ps: coveralls.net.exe --opencover coverage.xml -r 3d+rDxyuGPl4H9R/S/3OBlLWyH8NAncJfr8QfWfMV1XtTT8icBNIalrYietsIlIR
 
 version: 0.0.1.{build}
 
