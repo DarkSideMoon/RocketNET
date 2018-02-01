@@ -2,7 +2,7 @@ image: Visual Studio 2017
 
 before_build:
   - choco install opencover.portable
-  - choco install coveralls.io
+  - choco install coveralls.io --source https://dotnet.myget.org/F/dotnet-core/api/v2
 
 # version of net core
 environment:
