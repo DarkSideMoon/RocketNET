@@ -8,8 +8,6 @@ before_build:
 environment:
     matrix:
         - CLI_VERSION: 2.0.0
-
-environment:
     COVERALLS_REPO_TOKEN:  
        secure: Hr6KJjHQ56JBGymwN0rM1ydiix1WkarfL
 
