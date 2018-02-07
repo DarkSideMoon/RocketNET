@@ -32,18 +32,17 @@ after_test:
       Invoke-WebRequest -Uri 'https://codecov.io/bash' -OutFile codecov.sh
       bash codecov.sh -f "rocketnet_coverage.xml" -t 8c7fa0a0-b62e-4fda-8426-a1d22e6df390
       
- #deployment 
- 
- deploy:
-- provider: GitHub
-  tag: RocketNET-v$(appveyor_build_version)
-  release: RocketNET-v$(appveyor_build_version)
-  description: Automated release from AppVeyor
-  auth_token:
-    secure: FbnHTcyuZ94/9+eGyYaDs+6AAB0s3wa9351t8j23iC/lKjz1dLz8BF9At5LBW/xO
-  on:
-    branch: master
-    appveyor_repo_tag: true
+ #deployment  
+ #deploy:
+#- provider: GitHub
+#  tag: RocketNET-v$(appveyor_build_version)
+#  release: RocketNET-v$(appveyor_build_version)
+#  description: Automated release from AppVeyor
+#  auth_token:
+#    secure: FbnHTcyuZ94/9+eGyYaDs+6AAB0s3wa9351t8j23iC/lKjz1dLz8BF9At5LBW/xO
+#  on:
+#    branch: master
+#    appveyor_repo_tag: true
 
 # Next step to deploy to nuget
 #- provider: NuGet
