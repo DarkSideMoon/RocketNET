@@ -42,8 +42,6 @@ deploy:
     secure: FbnHTcyuZ94/9+eGyYaDs+6AAB0s3wa9351t8j23iC/lKjz1dLz8BF9At5LBW/xO
   on:
     appveyor_repo_tag: true
-    branch: master
-    
 
 # Next step to deploy to nuget
 #- provider: NuGet
