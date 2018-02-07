@@ -1,5 +1,8 @@
 image: Visual Studio 2017
 
+init:
+- ps: $Env:APPVEYOR_REPO_TAG -eq $true
+
 before_build:
   - choco install opencover.portable
   #- choco install coveralls.io --source https://dotnet.myget.org/F/dotnet-core/api/v2
