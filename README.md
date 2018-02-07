@@ -13,4 +13,6 @@
 | codecov  | [![codecov](https://codecov.io/gh/DarkSideMoon/RocketNET/branch/master/graph/badge.svg)](https://codecov.io/gh/DarkSideMoon/RocketNET)  |
 | Coverage | [![Coverage Status](https://coveralls.io/repos/github/DarkSideMoon/RocketNET/badge.svg?branch=master)](https://coveralls.io/github/DarkSideMoon/RocketNET?branch=master) |
 
-
+| Service  | Code quality |
+| ------------- | ------------- |
+| codacy  | [![Codacy Badge](https://api.codacy.com/project/badge/Grade/6056580b799f4866878bc6da4c839baa)](https://www.codacy.com/app/DarkSideMoon/RocketNET?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=DarkSideMoon/RocketNET&amp;utm_campaign=Badge_Grade) |
