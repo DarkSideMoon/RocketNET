@@ -31,3 +31,24 @@ after_test:
       $env:PATH = 'C:\msys64\usr\bin;' + $env:PATH
       Invoke-WebRequest -Uri 'https://codecov.io/bash' -OutFile codecov.sh
       bash codecov.sh -f "rocketnet_coverage.xml" -t 8c7fa0a0-b62e-4fda-8426-a1d22e6df390
+      
+ #deployment 
+ deploy:
+  - provider: GitHub
+   force_update: true
+   tag: $(APPVEYOR_REPO_TAG_NAME)
+   release: rocketnet $(APPVEYOR_REPO_TAG_NAME)
+   description: Automated release from AppVeyor
+   draft: true
+   auth_token:
+     secure: FbnHTcyuZ94/9+eGyYaDs+6AAB0s3wa9351t8j23iC/lKjz1dLz8BF9At5LBW/xO
+   on:
+     appveyor_repo_tag: true
+
+# Next step to deploy to nuget
+#- provider: NuGet
+#  server: https://www.myget.org/F/hello-netcoreapp/
+#  api_key:
+#    secure: TEST
+#  on:
+#    appveyor_repo_tag: true
