@@ -15,4 +15,5 @@
 
 | Service  | Code quality |
 | ------------- | ------------- |
-| codacy  | [![Codacy Badge](https://api.codacy.com/project/badge/Grade/6056580b799f4866878bc6da4c839baa)](https://www.codacy.com/app/DarkSideMoon/RocketNET?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=DarkSideMoon/RocketNET&amp;utm_campaign=Badge_Grade) |
+| codacy | [![Codacy Badge](https://api.codacy.com/project/badge/Grade/6056580b799f4866878bc6da4c839baa)](https://www.codacy.com/app/DarkSideMoon/RocketNET?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=DarkSideMoon/RocketNET&amp;utm_campaign=Badge_Grade) |
+| bettercodehub | [![BCH compliance](https://bettercodehub.com/edge/badge/DarkSideMoon/RocketNET?branch=master)](https://bettercodehub.com/) |
