@@ -1,13 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RocketNET.Core", "RocketNET.Core\RocketNET.Core.csproj", "{06E46E55-3127-4152-A0D0-0827854AB80A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8B24BBF2-A051-4864-B03E-F13B8FCBECE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketNET.Test", "RocketNET.Test\RocketNET.Test.csproj", "{805A29DA-EB43-4FC9-AB00-E37D010A8FBD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RocketNET.Test", "RocketNET.Test\RocketNET.Test.csproj", "{805A29DA-EB43-4FC9-AB00-E37D010A8FBD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logging", "Logging", "{E35466B3-89F8-4D7F-A483-DFCEEC425D1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketNET.Logging", "RocketNET.Logging\RocketNET.Logging.csproj", "{9A9DFD28-DAAD-4C77-8A37-61D34DA74759}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +27,17 @@ Global
 		{805A29DA-EB43-4FC9-AB00-E37D010A8FBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{805A29DA-EB43-4FC9-AB00-E37D010A8FBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{805A29DA-EB43-4FC9-AB00-E37D010A8FBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A9DFD28-DAAD-4C77-8A37-61D34DA74759}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A9DFD28-DAAD-4C77-8A37-61D34DA74759}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A9DFD28-DAAD-4C77-8A37-61D34DA74759}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A9DFD28-DAAD-4C77-8A37-61D34DA74759}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{805A29DA-EB43-4FC9-AB00-E37D010A8FBD} = {8B24BBF2-A051-4864-B03E-F13B8FCBECE4}
+		{9A9DFD28-DAAD-4C77-8A37-61D34DA74759} = {E35466B3-89F8-4D7F-A483-DFCEEC425D1E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {31B62A54-F292-4D7B-8C27-97EC47DE2347}
