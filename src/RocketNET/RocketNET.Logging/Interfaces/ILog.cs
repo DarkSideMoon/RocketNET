@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using RocketNET.Logging.Enums;
 
-namespace RocketNET.Logging
+namespace RocketNET.Logging.Interfaces
 {
     /// <summary>
     /// Different type of logging
@@ -15,6 +15,8 @@ namespace RocketNET.Logging
     {
         LogLevel LogLevel { get; set; }
 
+        LogType LogType { get; set; }
+
         LogParameter LogParameter { get; set; }
 
         LogNotification LogNotification { get; set; }
@@ -25,15 +27,15 @@ namespace RocketNET.Logging
 
         bool Log(string message, Exception exception, LogLevel logLevel);
 
-        bool Log(string message, 
-            Exception exception, 
-            LogLevel logLevel, 
+        bool Log(string message,
+            Exception exception,
+            LogLevel logLevel,
             LogNotification logNotification);
 
-        bool Log(string message, 
-            Exception exception, 
-            LogLevel logLevel, 
-            LogNotification logNotification, 
+        bool Log(string message,
+            Exception exception,
+            LogLevel logLevel,
+            LogNotification logNotification,
             LogParameter logParameter);
     }
 }
