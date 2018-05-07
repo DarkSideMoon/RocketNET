@@ -17,13 +17,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notification", "Notificatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Processing", "Processing", "{AE5D32A9-1CEF-4FC4-BFA2-D072518A26A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketNET.Notification", "RocketNET.Notification\RocketNET.Notification.csproj", "{F29A0712-62FC-4543-8199-3E99AD5FE3D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RocketNET.Notification", "RocketNET.Notification\RocketNET.Notification.csproj", "{F29A0712-62FC-4543-8199-3E99AD5FE3D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketNET.Analyzer", "RocketNET.Analyzer\RocketNET.Analyzer.csproj", "{8098CA35-2199-4C50-961B-FB7DDE500556}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RocketNET.Analyzer", "RocketNET.Analyzer\RocketNET.Analyzer.csproj", "{8098CA35-2199-4C50-961B-FB7DDE500556}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Parsing", "Parsing", "{0F3DCB4D-FB2D-46E7-A066-5E36B6B14F3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketNET.Parser", "RocketNET.Parser\RocketNET.Parser.csproj", "{0CF178A7-490C-4006-9709-34A0FB9AFA8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RocketNET.Parser", "RocketNET.Parser\RocketNET.Parser.csproj", "{0CF178A7-490C-4006-9709-34A0FB9AFA8C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{23D287F4-FFF6-441F-B457-2758B01DA06F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketNET.Model", "RocketNET.Model\RocketNET.Model.csproj", "{1F1771FC-0DA4-472B-8907-96D069004410}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +59,10 @@ Global
 		{0CF178A7-490C-4006-9709-34A0FB9AFA8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CF178A7-490C-4006-9709-34A0FB9AFA8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CF178A7-490C-4006-9709-34A0FB9AFA8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F1771FC-0DA4-472B-8907-96D069004410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F1771FC-0DA4-472B-8907-96D069004410}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F1771FC-0DA4-472B-8907-96D069004410}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F1771FC-0DA4-472B-8907-96D069004410}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,6 +73,7 @@ Global
 		{F29A0712-62FC-4543-8199-3E99AD5FE3D2} = {703A8B7F-FA6B-4627-82DA-99A996893355}
 		{8098CA35-2199-4C50-961B-FB7DDE500556} = {AE5D32A9-1CEF-4FC4-BFA2-D072518A26A3}
 		{0CF178A7-490C-4006-9709-34A0FB9AFA8C} = {0F3DCB4D-FB2D-46E7-A066-5E36B6B14F3A}
+		{1F1771FC-0DA4-472B-8907-96D069004410} = {23D287F4-FFF6-441F-B457-2758B01DA06F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {31B62A54-F292-4D7B-8C27-97EC47DE2347}
