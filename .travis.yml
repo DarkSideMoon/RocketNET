@@ -6,7 +6,7 @@ mono: none
 dotnet: 2.0.0
 
 install:
-  - dotnet restore ./src/RocketNET/RocketNET.sln
+  - travis_wait dotnet restore ./src/RocketNET/RocketNET.sln
 
 script:
 - dotnet build ./src/RocketNET/RocketNET.sln
