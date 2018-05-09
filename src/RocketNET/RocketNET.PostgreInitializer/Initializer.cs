@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
 using System.Text;
+using Npgsql;
 using RocketNET.InitializerModel;
 
 namespace RocketNET.PostgreInitializer
@@ -21,15 +24,26 @@ namespace RocketNET.PostgreInitializer
         /// </summary>
         private readonly string _sqlScriptsPath;
 
+
         /// <summary>
-        /// 
+        /// Connection string
+        /// </summary>
+        private readonly string _connectionString;
+
+        /// <summary>
+        /// Constructor
         /// </summary>
         /// <param name="mainInstallPath">Path to folder where database environment will be setup</param>
         /// <param name="sqlScriptsPath">Path to folder of database scripts destinations</param>
-        public Initializer(string mainInstallPath, string sqlScriptsPath)
+        /// <param name="connectionString">Connection string to database</param>
+        public Initializer(
+            string mainInstallPath, 
+            string sqlScriptsPath,
+            string connectionString)
         {
             _mainInstallPath = mainInstallPath;
             _sqlScriptsPath = sqlScriptsPath;
+            _connectionString = connectionString;
         }
 
         /// <summary>
@@ -59,10 +73,34 @@ namespace RocketNET.PostgreInitializer
 
         public void CreateDatabase()
         {
-            throw new NotImplementedException();
+            string sqlScript = GetResourseScript("CreateDatabase");
+
+            try
+            {
+                using (NpgsqlConnection сonnection = new NpgsqlConnection(_connectionString))
+                {
+                    using (NpgsqlCommand command = new NpgsqlCommand(sqlScript))
+                    {
+                        сonnection.Open();
+                        command.ExecuteNonQuery();
+                        сonnection.Close();
+                    }
+                }
+                // TODO: If everything OK need logging 
+            }
+            catch (Exception e)
+            {
+                // TODO: Need logging 
+                throw e;
+            }
         }
 
         public void CreateTables()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CreateSequences()
         {
             throw new NotImplementedException();
         }
@@ -75,6 +113,35 @@ namespace RocketNET.PostgreInitializer
         public void CreateViews()
         {
             throw new NotImplementedException();
+        }
+
+        
+        /// <summary>
+        /// Get resourse sql script to work 
+        /// </summary>
+        /// <param name="scriptName"></param>
+        /// <returns></returns>
+        private string GetResourseScript(string scriptName)
+        {
+            string resourse = String.Empty;
+            var assembly = Assembly.GetExecutingAssembly();
+
+            try
+            {
+                using (Stream stream = assembly.GetManifestResourceStream($"{scriptName}.sql"))
+                {
+                    using (StreamReader reader = new StreamReader(stream))
+                    {
+                        resourse = reader.ReadToEnd();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
+            return resourse;
         }
     }
 }
