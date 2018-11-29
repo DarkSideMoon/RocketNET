@@ -24,7 +24,7 @@ namespace RocketNET.Notification.Telegram.WebApi
             Configuration = configuration;
 
             var client = new TelegramBotClient("");
-            client.SetWebhookAsync("https://3bdd0dff.ngrok.io/bot").Wait();
+            client.SetWebhookAsync("https://3906fafe.ngrok.io/bot").Wait();
         }
 
         public IConfiguration Configuration { get; }

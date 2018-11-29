@@ -4,10 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RocketNET.Notification.Telegram.Buttons;
 using Telegram.Bot;
 using Telegram.Bot.Args;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
+using Telegram.Bot.Types.ReplyMarkups;
 
 namespace RocketNET.Notification.Telegram.WebApi.Controllers
 {
@@ -30,6 +32,8 @@ namespace RocketNET.Notification.Telegram.WebApi.Controllers
         [HttpPost]
         public async void Post([FromBody]Update update)
         {
+            SimpleButtons buttons = new SimpleButtons();
+
             if (update == null)
                 return;
 
@@ -37,11 +41,12 @@ namespace RocketNET.Notification.Telegram.WebApi.Controllers
             if (message?.Type == MessageType.Text)
             {
 
-                if(!String.IsNullOrEmpty(message.Chat.Username))
+                if (!String.IsNullOrEmpty(message.Chat.Username))
                     await _client.SendTextMessageAsync(message.Chat.Id,
-                        $"Hi, {message.Chat.Username}, " + message.Text);
+                        $"Hi, {message.Chat.Username}, " + message.Text, replyMarkup: buttons.GetInlineButtons());
                 else
-                    await _client.SendTextMessageAsync(message.Chat.Id, message.Text);
+                    await _client.SendTextMessageAsync(message.Chat.Id, message.Text,
+                        replyMarkup: buttons.GetInlineButtons());
             }
         }
     }

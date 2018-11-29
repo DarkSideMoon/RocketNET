@@ -18,4 +18,8 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RocketNET.Notification.Telegram\RocketNET.Notification.Telegram.csproj" />
+  </ItemGroup>
+
 </Project>
