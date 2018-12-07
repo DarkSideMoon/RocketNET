@@ -41,7 +41,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RocketNET.Notification.Tele
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NeuralNetwork", "NeuralNetwork", "{2DFF6687-3FCD-41AB-BDCF-75586C091787}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketNET.NeuralNetwork", "RocketNET.NeuralNetwork\RocketNET.NeuralNetwork.csproj", "{72F12DA7-AD98-40BB-AA3C-ABB65806D698}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RocketNET.NeuralNetwork", "RocketNET.NeuralNetwork\RocketNET.NeuralNetwork.csproj", "{72F12DA7-AD98-40BB-AA3C-ABB65806D698}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketNET.NeuralNetwork.Tests", "RocketNET.NeuralNetwork.Tests\RocketNET.NeuralNetwork.Tests.csproj", "{6FEDEE3C-FB3A-43D9-98A0-BE741982BB9E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -97,6 +99,10 @@ Global
 		{72F12DA7-AD98-40BB-AA3C-ABB65806D698}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72F12DA7-AD98-40BB-AA3C-ABB65806D698}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72F12DA7-AD98-40BB-AA3C-ABB65806D698}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FEDEE3C-FB3A-43D9-98A0-BE741982BB9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FEDEE3C-FB3A-43D9-98A0-BE741982BB9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FEDEE3C-FB3A-43D9-98A0-BE741982BB9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FEDEE3C-FB3A-43D9-98A0-BE741982BB9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -113,6 +119,7 @@ Global
 		{74D4FBEA-D569-44F0-8FBE-2AB135C026F3} = {703A8B7F-FA6B-4627-82DA-99A996893355}
 		{BE736CE0-D7E8-4469-A247-64B19B3B0042} = {703A8B7F-FA6B-4627-82DA-99A996893355}
 		{72F12DA7-AD98-40BB-AA3C-ABB65806D698} = {2DFF6687-3FCD-41AB-BDCF-75586C091787}
+		{6FEDEE3C-FB3A-43D9-98A0-BE741982BB9E} = {2DFF6687-3FCD-41AB-BDCF-75586C091787}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {31B62A54-F292-4D7B-8C27-97EC47DE2347}

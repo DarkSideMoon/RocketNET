@@ -11,10 +11,10 @@ namespace RocketNET.NeuralNetwork
     {
         private NeuralLayerFactory _layerFactory;
 
-        internal List<NeuralLayer> _layers;
-        internal Dictionary<int, double[]> _neuronErrors;
-        internal double _learningRate;
-        internal double[][] _expectedResult;
+        public List<NeuralLayer> _layers;
+        public Dictionary<int, double[]> _neuronErrors;
+        public double _learningRate;
+        public double[][] _expectedResult;
 
         /// <summary>
         /// Constructor of the Neural Network.
