@@ -8,4 +8,8 @@
     <PackageReference Include="Telegram.Bot" Version="14.10.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RocketNET.Logging\RocketNET.Logging.csproj" />
+  </ItemGroup>
+
 </Project>

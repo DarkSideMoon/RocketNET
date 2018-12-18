@@ -43,7 +43,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NeuralNetwork", "NeuralNetw
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RocketNET.NeuralNetwork", "RocketNET.NeuralNetwork\RocketNET.NeuralNetwork.csproj", "{72F12DA7-AD98-40BB-AA3C-ABB65806D698}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketNET.NeuralNetwork.Tests", "RocketNET.NeuralNetwork.Tests\RocketNET.NeuralNetwork.Tests.csproj", "{6FEDEE3C-FB3A-43D9-98A0-BE741982BB9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RocketNET.NeuralNetwork.Tests", "RocketNET.NeuralNetwork.Tests\RocketNET.NeuralNetwork.Tests.csproj", "{6FEDEE3C-FB3A-43D9-98A0-BE741982BB9E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{301A0E50-8748-4A64-8263-71BA062518AD}"
+	ProjectSection(SolutionItems) = preProject
+		XMLSchema1.xsd = XMLSchema1.xsd
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

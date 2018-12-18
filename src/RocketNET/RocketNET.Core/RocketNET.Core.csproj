@@ -8,4 +8,13 @@
     <PackageReference Include="coveralls.io" Version="1.4.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RocketNET.Analyzer\RocketNET.Analyzer.csproj" />
+    <ProjectReference Include="..\RocketNET.InitializerModel\RocketNET.InitializerModel.csproj" />
+    <ProjectReference Include="..\RocketNET.Logging\RocketNET.Logging.csproj" />
+    <ProjectReference Include="..\RocketNET.NeuralNetwork\RocketNET.NeuralNetwork.csproj" />
+    <ProjectReference Include="..\RocketNET.Parser\RocketNET.Parser.csproj" />
+    <ProjectReference Include="..\RocketNET.PostgreInitializer\RocketNET.PostgreInitializer.csproj" />
+  </ItemGroup>
+
 </Project>

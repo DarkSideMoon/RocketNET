@@ -4,13 +4,8 @@ using System.Text;
 
 namespace RocketNET.Notification.Builder
 {
-    public class NotificationEmailBuilder : NotificationBuilderAbstract
+    public class NotificationConsoleBuilder : NotificationBuilderAbstract
     {
-        public NotificationEmailBuilder()
-        {
-            
-        }
-
         public override void BuildTopic()
         {
             throw new NotImplementedException();

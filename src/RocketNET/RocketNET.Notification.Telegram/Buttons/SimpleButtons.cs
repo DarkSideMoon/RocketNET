@@ -47,6 +47,49 @@ namespace RocketNET.Notification.Telegram.Buttons
             };
         }
 
+        public InlineKeyboardMarkup GetRequisitesButtons()
+        {
+            var keys = new[]
+            {
+                new InlineKeyboardButton[]
+                {
+                    new InlineKeyboardButton()
+                    {
+                        Text = "Таскомбанк",
+                        CallbackData = "Tas"
+                    },
+                    new InlineKeyboardButton()
+                    {
+                        Text = "Приватбанк",
+                        CallbackData = "Privat"
+                    }
+                },
+                new InlineKeyboardButton[]
+                {
+                    new InlineKeyboardButton()
+                    {
+                        Text = "ВТБ Банк",
+                        CallbackData = "VTB"
+                    },
+                    new InlineKeyboardButton()
+                    {
+                        Text = "Альфа банк",
+                        CallbackData = "Alpha"
+                    }
+                },
+                new InlineKeyboardButton[]
+                {
+                    new InlineKeyboardButton()
+                    {
+                        Text = "🔙 Назад",
+                        CallbackData = "Back"
+                    },
+                }
+            };
+
+            return new InlineKeyboardMarkup(keys);
+        }
+
         public InlineKeyboardMarkup GetInlineButtons()
         {
             var keys = new[]
@@ -55,8 +98,8 @@ namespace RocketNET.Notification.Telegram.Buttons
                 {
                     new InlineKeyboardButton()
                     {
-                        Text = "Firts button 😋",
-                        CallbackData = "Test 1"
+                        Text = "💰 Реквізити",
+                        CallbackData = "Requisites"
                     },
                     new InlineKeyboardButton()
                     {

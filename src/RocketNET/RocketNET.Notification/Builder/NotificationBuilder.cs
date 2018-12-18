@@ -6,7 +6,7 @@ namespace RocketNET.Notification.Builder
 {
     public class NotificationBuilder
     {
-        private readonly NotificationBuilderAbstract _notificationBuilder;
+        public NotificationBuilderAbstract _notificationBuilder;
 
         public NotificationBuilder(NotificationBuilderAbstract builder)
         {
